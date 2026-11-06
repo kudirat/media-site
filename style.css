@@ -1,18 +1,30 @@
 body, html {
-    background-color: #000000;
+    background-color: #A5BCD6;
 }
 
 #main {
     height: 100vh;
     width: 100vw;
-    display: flex;
+    display: grid;
+    grid-gap: 2px;
     justify-content: center;
     align-items: center;
+}
+
+#roomInput {
+    font-size: 12px;
+    align-items: center;
+    border-style: 3px double #F5EFC6;
+}
+
+#connectRoom {
+    background-color: #6c1a1a;
 }
 
 #videoStuff {
     display: flex;
     justify-content: center;
+    justify-self: center;
     align-items: center;
     width: 50%;
     height: 50%;

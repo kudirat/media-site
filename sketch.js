@@ -5,6 +5,9 @@ let myVideo;
 let otherVideo;
 let currRoom;
 
+const connectRoom = document.getElementById('connectRoom');
+currRoom = document.getElementById('roomInput');
+
 let constraints = {audio: true, video: true};
 
 connectRoom.addEventListener('click', function(e) {
