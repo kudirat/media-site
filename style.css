@@ -1,31 +1,136 @@
-body, html {
-    background-color: #A5BCD6;
+body,
+html {
+  background-color: #a5bcd6;
 }
 
 #main {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-gap: 2px;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 20%;
+  grid-template-rows: 200px 100px 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 #roomInput {
-    font-size: 12px;
-    align-items: center;
-    border-style: 3px double #F5EFC6;
+  font-size: 12px;
+  align-items: center;
+  border-style: 3px #6c1a1a double;
+  margin-top: 450px;
 }
 
 #connectRoom {
-    background-color: #6c1a1a;
+  background-color: #a5bcd6;
+  margin-top: 320px;
+  /* margin-left: 80px; */
+  color: #2d120d;
+  width: 100px;
+  border: #6c1a1a 3px double;
+  justify-self: center;
+}
+
+#connectRoom:hover {
+  background-color: #6c1a1a;
+  border: #a5bcd6 3px double;
+  color: #a5bcd6;
+  cursor: pointer;
+}
+
+#connectRoom:active {
+  background-image: linear-gradient(
+    to right,
+    #6c1a1a 0%,
+    #6c1a1a 50%,
+    #2d120d 50%,
+    #2d120d 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100%; /*100% 0%*/
+  animation: 1s confirmation ease-out forwards;
+}
+
+@keyframes confirmation {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0%;
+  }
 }
 
 #videoStuff {
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  margin-top: 300px;
+  width: 50%;
+  height: 50%;
 }
+
+canvas {
+  border: 3px #6c1a1a double;
+  border-radius: 10px;
+}
+
+.circle {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* #outter-circle-0 {
+  left: -100px;
+  top: -50px;
+  background-color: #2d120d;
+} */
+
+/* #outter-circle-1 {
+  left: -250px;
+  top: -50px;
+    background-color: #2d120d;
+
+} */
+
+#outter-circle-2 {
+  left: 100px;
+  top: -50px;
+    background-color: #2d120d;
+  border: 3px #fff8ca double;
+
+}
+
+#outter-circle-3 {
+  left: 300px;
+  top: -50px;
+    background-color: #2d120d;
+  border: 3px #fff8ca double;
+
+}
+
+#outter-circle-4 {
+  left: 500px;
+  top: -50px;
+    background-color: #2d120d;
+  border: 3px #fff8ca double;
+
+}
+
+#outter-circle-5 {
+  left: 700px;
+  top: -50px;
+    background-color: #2d120d;
+  border: 3px #fff8ca double;
+
+}
+
+#outter-circle-6 {
+  left: 900px;
+  top: -50px;
+    background-color: #2d120d;
+  border: 3px #fff8ca double;
+
+}
+

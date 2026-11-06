@@ -19,6 +19,13 @@ function setup() {
   cnv.parent(videoStuff)
 }
 
+function updateButton() {
+  let temp = document.getElementById('roomInput').value;
+  if(temp == "connect!") {
+    document.getElementById('connectRoom').value = "leave room";
+  }
+}
+
 function connectToRoom(currRoom) {
     myVideo = createCapture(VIDEO, 
       function(stream) {
@@ -31,17 +38,18 @@ function connectToRoom(currRoom) {
 }
 
 function draw() {
-  background(220);
+  background(165, 188, 214);
   stroke(255);
   if (myVideo != null) {
     image(myVideo,0,0,width/2,height);
-    text("My Video", 10, 10);
+    text("Thing 1", 10, 10);
   }
+  fill(90,0,6);
   ellipse(mouseX,mouseY,100,100);
 
   if (otherVideo != null) {
-    image(otherVideo,width/2,0,width/2,height);
-    text("Their Video", width/2+10, 10);
+    image(otherVideo,width/2 + 10,0,width/2,height);
+    text("Thing 2", width/2+10, 10);
   }  
 }
 
